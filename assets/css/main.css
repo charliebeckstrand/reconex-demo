@@ -1,0 +1,21 @@
+@import 'tailwindcss';
+@import '@nuxt/ui';
+
+html,
+body,
+#__nuxt {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'TikTok Sans', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 300;
+	font-style: normal;
+	font-variation-settings: 'slnt' 0, 'wdth' 100;
+
+	background-color: white;
+	color: #2c2c2c;
+}
