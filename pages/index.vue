@@ -167,6 +167,13 @@ const items = ref<BreadcrumbItem[]>([
 				</blockquote>
 				<figcaption class="mt-10 flex items-center gap-x-6">
 					<div>
+						<div>
+							<img
+								src="https://reconex.io/wp-content/uploads/2025/03/Kerma-Medical.svg"
+								alt="Kerma Medical Logo"
+								class="w-32 h-auto object-contain mb-2"
+							/>
+						</div>
 						<div class="flex gap-2.5">
 							<div class="font-semibold text-gray-900 mt-4">
 								Jeff Hurley

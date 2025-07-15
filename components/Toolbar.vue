@@ -62,8 +62,9 @@ const items = [
 				<UButton
 					size="xl"
 					color="neutral"
+					variant="ghost"
 					trailing-icon="lucide:menu"
-					:ui="{ base: 'text-gray-700' }"
+					:ui="{ base: 'text-gray-700 hover:bg-gray-100' }"
 					class="!p-2 !rounded-full"
 				/>
 			</template>
