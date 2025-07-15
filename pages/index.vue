@@ -1,17 +1,11 @@
 <script setup lang="ts">
+import { breakpointsTailwind, useBreakpoints } from '@vueuse/core'
+
 import type { BreadcrumbItem } from '@nuxt/ui'
 
-const items = ref<BreadcrumbItem[]>([
-	{
-		label: 'Home',
-		icon: 'i-lucide-house'
-	},
-	{
-		label: 'Dashboard',
-		icon: 'i-lucide-grid',
-		to: '/dashboard'
-	}
-])
+const breakpoints = useBreakpoints(breakpointsTailwind)
+
+const largerThanLg = breakpoints.greater('lg')
 </script>
 
 <template>
@@ -187,9 +181,11 @@ const items = ref<BreadcrumbItem[]>([
 
 				<div class="mt-10">
 					<UButton
-						color="neutral"
 						variant="subtle"
 						size="xl"
+						:ui="{
+							base: 'bg-[#2c2c2c] hover:bg-[#111] text-white whitespace-nowrap'
+						}"
 					>
 						Kerma's FS 5000 story.
 						<UIcon
@@ -219,7 +215,7 @@ const items = ref<BreadcrumbItem[]>([
 			</div>
 		</section>
 
-		<section class="bg-[#eee] pt-12 sm:pt-24">
+		<section class="bg-[#f5f5f5] pt-12 sm:pt-24">
 			<div class="mx-auto max-w-7xl px-6 lg:px-8">
 				<div class="mx-auto max-w-2xl sm:text-center">
 					<h2 class="text-2xl font-semibold">
@@ -316,9 +312,10 @@ const items = ref<BreadcrumbItem[]>([
 				<span class="font-black">RateAlignment™</span>
 			</div>
 			<UButton
-				size="xl"
 				:ui="{
-					base: 'bg-[#C80003] hover:bg-[#A70002] text-xl text-white whitespace-nowrap p-3'
+					base:
+						'bg-[#C80003] hover:bg-[#A70002] text-white whitespace-nowrap' +
+						(largerThanLg ? ' p-3 text-xl' : 'p-2 text-lg')
 				}"
 				trailing-icon="lucide:arrow-right"
 				class="mt-10"
@@ -442,7 +439,7 @@ const items = ref<BreadcrumbItem[]>([
 		<section class="bg-white px-8 py-12 sm:py-24 text-center">
 			<div class="text-2xl sm:text-3xl text-[#C80003]">SmartSelect™</div>
 
-			<div class="mt-10 text-4xl sm:text-5xl font-bold">
+			<div class="mt-8 text-4xl sm:text-5xl font-bold">
 				Stop guessing.
 				<span class="line-through">Start</span>
 				Smart selecting.
