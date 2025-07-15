@@ -19,10 +19,13 @@ const largerThanLg = breakpoints.greater('lg')
 					>
 						<div class="flex">
 							<div class="lg:max-w-lg my-auto">
+								<!-- prettier-ignore -->
 								<p
 									class="mt-8 text-4xl sm:text-5xl font-black tracking-tight text-pretty text-gray-900"
 								>
-									See every load. Zero tab chaos.
+									<span
+										class="bg-gradient-to-r from-[#111] to-[#C80003] text-transparent bg-clip-text"
+									>See every load</span>. Zero tab chaos.
 								</p>
 								<p class="my-8 text-lg/8 text-gray-700">
 									See performance, damage, delays, and missed
@@ -72,7 +75,7 @@ const largerThanLg = breakpoints.greater('lg')
 					for the grind.
 				</h2>
 				<div
-					class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5"
+					class="mx-auto mt-10 grid max-w-lg grid-cols-4 items-center gap-x-8 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-4 lg:max-w-none lg:grid-cols-5"
 				>
 					<img
 						class="col-span-2 max-h-12 w-full object-contain lg:col-span-1"
