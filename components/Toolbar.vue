@@ -48,17 +48,17 @@ const items = [
 						{{ item.text }}
 					</div>
 				</nuxt-link>
-				<UButton
-					size="xl"
-					:ui="{
-						base: 'bg-[#C80003] hover:bg-[#A70002] text-white whitespace-nowrap'
-					}"
-					trailing-icon="lucide:square-dashed-mouse-pointer"
-				>
-					Book a demo
-				</UButton>
 			</template>
-			<template v-else>
+			<UButton
+				:size="largerThanLg ? 'xl' : 'lg'"
+				:ui="{
+					base: 'bg-[#C80003] hover:bg-[#A70002] text-white whitespace-nowrap'
+				}"
+				trailing-icon="lucide:square-dashed-mouse-pointer"
+			>
+				Book a demo
+			</UButton>
+			<template v-if="!largerThanLg">
 				<UButton
 					size="xl"
 					color="neutral"
